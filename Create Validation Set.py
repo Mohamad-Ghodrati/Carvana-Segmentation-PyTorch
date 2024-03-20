@@ -3,12 +3,12 @@
 import os 
 import shutil
 import random 
-from glob import glob 
+import glob 
 
 
 def create_validation_path(image_path: str) -> str:
     """
-    Creates the path for an image within the validation set by modifying the original training set path.
+    Creates path for an image within the validation set by modifying the original training set path.
     
     Args:
         image_path (str): The path of the image in training set.
@@ -22,7 +22,7 @@ def create_validation_path(image_path: str) -> str:
 
 def create_validation_mask_path(image_path: str) -> tuple[str, str]:
     """
-    Generates paths for both the mask and its corresponding mask in the validation set.
+    Generates paths for both the mask (in train set) and its corresponding mask in the validation set.
     
     Args:
         image_path (str): The path of the image in training set.
@@ -40,12 +40,14 @@ def create_validation_mask_path(image_path: str) -> tuple[str, str]:
 
 
 if __name__ == '__main__':
-    os.mkdir(r'Data\validation_images')
-    os.mkdir(r'Data\validation_masks')
+    os.makedirs(r'Data\validation_images', exist_ok=True)
+    os.makedirs(r'Data\validation_masks', exist_ok=True)
+    if os.listdir(r'Data\validation_images'):
+        print('Validation set already exists.')
+        exit(0)
 
-    images_path = glob(r'Data\train_images\*.jpg')
+    images_path = glob.glob(r'Data\train_images\*.jpg')
     validation_count = int(len(images_path) * 0.2)
-    
 
     selected_images_path = random.sample(images_path, validation_count)
     images_validation_path = list(map(create_validation_path, selected_images_path))
