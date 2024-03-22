@@ -40,13 +40,13 @@ python train.py
 
 
 Upon successful training completion, the code will save 10 prediction masks by default (you can modify this value in the code). These masks will be saved in a designated output directory (defaults to `'saved_images\'`).
-| Input image | Ground Truth | Preiction |
+| Input image | Ground Truth | Prediction |
 |---|---|---|
-| ![Image 1 description](saved_images\0.jpg) | ![Image 2 description](saved_images\0_mask.jpg) | ![Image 3 description](saved_images\0_pred.jpg) |
+| ![Image 1 description](saved_images/0.jpg) | ![Image 2 description](saved_images/0_mask.jpg) | ![Image 3 description](saved_images/0_pred.jpg) |
 
-| Input image | Ground Truth | Preiction |
+| Input image | Ground Truth | Prediction |
 |---|---|---|
-| ![Image 1 description](saved_images\1.jpg) | ![Image 2 description](saved_images\1_mask.jpg) | ![Image 3 description](saved_images\1_pred.jpg) |
+| ![Image 1 description](saved_images/1.jpg) | ![Image 2 description](saved_images/1_mask.jpg) | ![Image 3 description](saved_images/1_pred.jpg) |
 
 
 ## Contributing
