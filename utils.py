@@ -1,4 +1,5 @@
 """Utilities for training and evaluation."""
+import os
 
 import torch
 import torchvision
@@ -113,6 +114,7 @@ def save_predictions_as_mask(
     Returns:
         None
     """
+    os.makedirs(save_directory, exist_ok=True)
     selected_targets = []
     selected_data = []
     num_selected = 0

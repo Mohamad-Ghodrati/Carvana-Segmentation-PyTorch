@@ -1,3 +1,4 @@
+import os
 from typing import Callable
 
 import torch
@@ -144,6 +145,7 @@ def main():
             hyperparams.device,
         )
 
+    os.makedirs("model_weights", exist_ok=True)
     save_checkpoint(
         model.state_dict(), optimizer.state_dict(), "model_weights\\chechpoint.pth"
     )

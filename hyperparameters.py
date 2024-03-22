@@ -11,7 +11,7 @@ class Hyperparameters:
         self.num_epochs = 3
         self.image_height = 160
         self.image_width = 240
-        self.load_model = True
+        self.load_model = False
         self.checkpoint_path = r"model_weights\chechpoint (2024_03_21 19_24_06 UTC).pth"
         self.train_image_directory = r"Data\train_images"
         self.train_mask_directory = r"Data\train_masks"
