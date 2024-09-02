@@ -13,7 +13,7 @@ from dataset import CarvanaDataset
 def load_checkpoint(
     model: torch.nn.Module,
     optimizer: torch.optim.Optimizer = None,
-    checkpoint_path: str = r"model_weights\chechpoint.pth",
+    checkpoint_path: str = r"model_weights\checkpoint.pth",
 ) -> None:
     """
     Loads a model checkpoint from the specified path.
@@ -105,7 +105,7 @@ def save_predictions_as_mask(
         model (nn.Module): The model used to generate predictions.
         dataloader (torch.utils.data.DataLoader): A DataLoader containing the dataset
                                                   for generating predictions.
-        device (torch.device): The device to use for computation.
+        device (str): The device to use for computation.
         num_save (int, optional): The number of images, predictions and masks to save.
                                    Defaults to 10.
         save_directory (str, optional): The directory to save the images.
