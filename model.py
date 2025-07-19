@@ -64,7 +64,7 @@ class UNET(nn.Module):
         out_channels (int, optional): Number of output channels. Defaults to 1.
         features (list of int, optional): A list of feature channel counts for each
                                           downsampling step in the U-Net.
-                                          Defaults to [64, 128, 256, 512].
+                                          Defaults to (64, 128, 256, 512).
     """
 
     def __init__(
